@@ -1,0 +1,20 @@
+%Sloan Woods
+%ME203
+%9/15/2021
+%Lab 6 / Quadroots
+clc,clear all, format compact;
+a=3;
+b=11;
+c=2 ;
+q=-b/(2*a);
+r=(sqrt((b^2)-4*a*c))/(2*a);
+s1=q+r;
+s2=q-r;
+
+disp('First root')
+disp (s1)
+disp ('Second root')
+disp(s2)
+
+
+fprintf('The first root is %4.1f and the second root is %4.1f',s1,s2)
