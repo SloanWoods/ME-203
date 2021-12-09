@@ -1,0 +1,15 @@
+%Woods, Sloan 
+%ME 203
+%10/06/2021
+%Lab 12
+
+clc, clear, format compact 
+
+
+x=[-4:0.5:6]
+y=((x+2).*(x-1).*(x-3))
+plot(x,y)
+title('x vs y')
+xlabel('x values')
+ylabel('y funtion values')
+legend('f(x)=(x+2)((x-1)(x-3)')
