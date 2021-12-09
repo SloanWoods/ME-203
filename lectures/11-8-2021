@@ -1,0 +1,34 @@
+%Woods, Sloan
+%Lab 20
+%11/8/2021
+
+clc, clear, format compact
+
+%%Trapz
+% x=linspace(0,pi,100);
+% y=sin(x);
+% trapz(x,y)
+% ca=cumtrapz(x,y)
+% plot(x,y,x,ca)
+% f=@(x)(sin(x));
+% integral(f,0,pi)
+
+% xmin=pi;
+% xmax=2*pi;
+% ymin=0
+% ymax=pi;
+% F=@(x,y)(y.*sin(x)+x.*cos(y));
+% a=integral2(F,xmin,xmax,ymin,ymax)
+
+
+xmin=pi;
+xmax=2*pi;
+ymin=0;
+fymax=@(x)(x);
+ymax=fymax;
+zmin=0;
+fzmax=@(x,y)(x+y);
+zmax=fzmax;
+
+F=@(x,y,z)(z.*(y.*sin(x)+x.*cos(y)));
+R=integral3(F,xmin,xmax,ymin,ymax,zmin,zmax)
