@@ -1,0 +1,39 @@
+%Woods, Sloan
+%ME 203 
+%11-03-2021
+%Lab 18 and 19
+
+clc, clear, format compact
+
+
+% x=1:6;
+% y=[1 22 50 62 97 110];
+% P=polyfit(x,y,1);
+% y1=polyval(P,x);
+% plot(x,y,'o',x,y1,'g')
+% rms=rms(y1) %rms error
+
+% xi=3.6;
+% x=[0 1 2 3 4 5];
+% t1=[0 20 60 68 77 110];
+% t2=[0 25 62 67 82 103];
+% t3=[0 52 90 91 93 96];
+% 
+% i=interpl(x,t1,3.6)
+% j=interpl(x,t2,3.6)
+% k=interpl(x,t3,3.6)
+
+% r1=round(6*rand(1,10))
+
+%% Lab 18 Noisy Signal
+
+clc, clear, format compact
+
+t= linspace(0,10,512);
+S=1*sin((2*pi/5)*t);
+N=0.1*randn(size(t));
+X=S+N
+SNR=20*log10(std(S)/std(N))
+plot(t,X)
+xlabel('Time')
+ylabel('Signal + Noise')
