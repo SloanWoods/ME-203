@@ -1,0 +1,27 @@
+function [data_filtered,L] = clean_words_hero (remove)
+% Removes the top most comon words form a cell aray
+% https://www.espressoenglish.net/the-100-most-common-words-in-english/
+remove(ismember(remove,'the')) = []; % removes the most comon word
+remove(ismember(remove,'of')) = []; 
+remove(ismember(remove,'and')) = []; 
+remove(ismember(remove,'a')) = []; 
+remove(ismember(remove,'to')) = []; 
+remove(ismember(remove,'in')) = []; 
+remove(ismember(remove,'is')) = []; 
+remove(ismember(remove,'you')) = []; 
+remove(ismember(remove,'that')) = []; 
+remove(ismember(remove,'it')) = [];   % 10th most common word
+remove(ismember(remove,'he')) = []; 
+remove(ismember(remove,'was')) = []; 
+remove(ismember(remove,'for')) = []; 
+remove(ismember(remove,'on')) = []; 
+remove(ismember(remove,'are')) = []; 
+remove(ismember(remove,'as')) = []; 
+remove(ismember(remove,'with')) = []; 
+remove(ismember(remove,'his')) = []; 
+remove(ismember(remove,'they')) = []; 
+remove(ismember(remove,'i')) = [];  % 20th most common word
+Output = remove;
+data_filtered=Output;
+L=length(data_filtered);% length of filtered data array
+end
