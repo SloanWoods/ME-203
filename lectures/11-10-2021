@@ -1,0 +1,26 @@
+% Woods, Sloan
+% ME 203
+% 11/10/2021
+% Lab 21
+
+clc, clear, format compact
+
+% x= [0:0.1:10];
+% y= cos(x);
+% n=length(x);
+% dy=y(3:n)-y(1:n-2);
+% dx=x(3:n)-x(1:n-2);
+% 
+% A=dy./dx;
+% 
+% plot(x,y,x(2:n-1),A)
+% legend('cos(x)','dy/dx(cos(x))')
+
+
+%% Lab assignment 21
+
+x=[0,3]
+y=1
+f=@(x,y) (-2*x.^3+x-y)
+
+[x y]=ode45(f,[0 3],1)
