@@ -1,0 +1,20 @@
+%Woods, Sloan
+%Lab 16 Assignment
+%10/25/2021
+
+clc, clear, format compact 
+
+n=0;
+counter=0;
+free=0;
+balence=input('How much money do you have? :');
+while balence>=7.5
+    n=n+1;
+    balence=balence-7.5;
+    if counter==2
+        free= free+1;
+        counter=0;
+    end
+end
+total=n+free;
+fprintf('Total number of meals= %i \n%i Free meals \n%i',total,free)
