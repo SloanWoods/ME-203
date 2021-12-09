@@ -1,1 +1,149 @@
+% Woods, Sloan
+% ME 203
+% Homework 4 
+% 11/10/2021
+
+clc, clear, format compact
+
+%% Problem 1
+clc, clear, format compact
+% 
+A=[3 5 -4; -8 -1 33; -17 6 -9];
+% for i=1:size(A,1)         %Solving B with a while loop
+%     for j=1:size(A,2)
+%         while A(i,j)>-1
+%             A(i,j)=log(A(i,j));
+%             break;
+%         end
+%         while A(i,j)>=-1
+%             A(i,j)=A(i,j)+20;
+%             break;
+%         end
+%     end
+% end
+% B=A;
+% disp(B)
+
+ % C=B without loop
+ %C=log(A+20*(A<=-1))
+
+%% Problem 2
+clc, clear, format compact
+%Original Code
+% k=1;
+% b=-2;
+% x=-1;
+% y=-2;
+% while k<=3k,
+%     b,x,y
+%     y=x^2-3;
+%     if y<b
+%         b=y;
+%     end
+%     x=x+1;
+%     k=k+1;
+% end
+% New Code to fill in Table 
+% k=1;
+% b=-2;
+% x=-1;
+% y=-2;
+% i=0;
+% K=0;
+% B=0;
+% X=0;
+% Y=0;
+% while k<=5
+%     i=i+1;
+%     k,b,x,y
+%     K(i)=k;
+%     B(i)=b;
+%     X(i)=x;
+%     Y(i)=y;
+%     y=x^2-3;
+%     if y<b
+%         b=y;
+%     end
+%     x=x+1;
+%     k=k+1;
+% end
+% K=K';
+% B=B';
+% X=X';
+% Y=Y';
+% Pass={'First';'Second';'Third';'Fourth';'Fifth'};
+% T=table(Pass,K,B,X,Y)     % I'm not sure if this is the right process,
+                    % but it was the only way I could get it to mostly work 
+
+%% Problem 3
+clc, clear, format compact
+
+% u=[0.20 0.35 0.40 0.70];      %Given u values
+% W=input('Input W=');              %Entered inputs for W and n
+% n=input('Input materials: ','s');
+% switch n                   %n switches case based on input of materials
+%     case 'metal on metal'
+%         F=0.2*W
+%     case 'wood on wood'
+%         F=0.35*W
+%     case 'metal on wood'
+%         F=0.4*W
+%     otherwise
+%         F=0.7*W
+% end
+% disp(F) %code doesn't display F :(
+
+%% Problem 4
+clc, clear, format compact
+
+% x1=input('Enter x1:');
+% y1=input('Enter y1:');
+% x2=input('Enter x2:');
+% y2=input('Enter y2:');
+% x3=input('Enter x3:');
+% y3=input('Enter y3:');
+% x4=input('Enter x4:');
+% y4=input('Enter y4:');
+% 
+% E=[x1^3 x1^2 x1 1; x2^3 x2^2 x2 1; x3^3 x3^2 x3 1; x4^3 x4^2 x4 1];
+% S=[y1; y2; y3; y4];
+% coeff=inv(E)*S;
+% a=coeff(1)
+% b=coeff(2)
+% c=coeff(3)
+% d=coeff(4)       
+%y= a*x^3+b*x^2+c*x+d
+
+%% Problem 5
+clc, clear, format compact
+
+% t=0:0.0001:4;         % range of time t
+% for i=1:length(t)
+% x=5*t*(i)-10;         % Given equations 
+% y=25*t.*i.^2-120*t*(i)+144;
+% d=sqrt(x*(i)^2+y*(i)^2);
+% end
+% Min_Distance=min(d)           % to determine minimum distance 
+% I=find(d==Min_Distance)   % I or i?
+% Time_closest=(i-1)*0.0001     % to determine time of closest point
+%Use a for loop to determine the distance 
+
+% attemt 2
+
+% t=0:0.001:4;
+% x=5*t*-10;
+% y=25*t.^2-120*t*+144;
+% d2=x.^2+y.^2;
+% min=1e+14         %starting point for min distance 
+% for k=1:length(t)
+%     if d2(k)<min
+%         min=d2(k)
+%         tmin=t(k)
+%     end 
+% end
+% disp('The minimum distance=')
+% disp(sqrt(min))
+% disp('it occurs at t=')
+% disp(tmin)
+
 
