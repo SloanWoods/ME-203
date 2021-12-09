@@ -1,0 +1,9 @@
+function [top,subcount,L] = problem3(a,N)
+
+data = get_words_hero(a);    % Funtion opens a file, scans through it, and closes the file
+remove = remove_delim_hero(data);    % Funtcion reads throught the string and deletes '.'',''?'''!' and makes all words lowercase
+[clean,L] = clean_words_hero(remove);  % Removes the most commen english words from the string of words
+[barx,cat]= categorizes_words_hero(clean);  % Puts each input in the string into a catagory based on the word
+[top,subcount] = Top_N(cat,barx,N);   % Finds the largest array of words from catagories and pulls N catagories to the script 
+
+end
