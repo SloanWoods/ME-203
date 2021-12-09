@@ -1,0 +1,111 @@
+% Problem 3
+% Woods, Sloan
+
+clc, clear all, format compact 
+
+a = input('Hero Name: ', 's');      % Hero name will convert to a .txt in the switch case 
+N = input('Input a Number: ');      % Number of top words you want to see
+
+switch a
+    case{'Thor','thor'}     % Test hero names (lower case entries included)
+        [top,subcount,L]= problem3('Thor.txt',N);    % Inputs hero txt file into the final function
+        figure(1)
+        bar(subcount)          % Displays bar graph of N words used
+        set(gca,'XtickLabel',top)   % Bars are titled by word
+        set(gca,'Fontsize',8)       % Word font size on bar graph 
+        title('Thor')               % Title based on user input
+    case{'Ironman','Tony Stark','ironman','tony stark'}    % Repeat for all 6 heros depending on user input
+        [top,subcount,L]= problem3('Tony_Stark.txt',N);
+        figure(1)
+        bar(subcount)
+        set(gca,'XtickLabel',top)
+        set(gca,'Fontsize',8)
+        title('Tony Stark aka Ironman')
+    case{'Steve Rogers','Captain America','Cap','captain america','cap','steve rogers'}
+        [top,subcount,L]= problem3('Steve_Rogers.txt',N);
+        figure(1)
+        bar(subcount)
+        set(gca,'XtickLabel',top)
+        set(gca,'Fontsize',8)
+        title('Steve Rogers aka Captain America')
+    case{'Nick Fury','Fury','fury','nick fury'}
+        [top,subcount,L]= problem3('Nick_Fury.txt',N);
+        figure(1)
+        bar(subcount)
+        set(gca,'XtickLabel',top)
+        set(gca,'Fontsize',8)
+        title('Nick Fury')
+    case{'Natasha Romanoff','Natasha','Nat','nat','Black Widow','black widow','natasha','natasha romanoff'}
+        [top,subcount,L]= problem3('Natasha_Romanoff.txt',N);
+        figure(1)
+        bar(subcount)
+        set(gca,'XtickLabel',top)
+        set(gca,'Fontsize',8)
+        title('Natasha Romanoff aka Black Widow')
+    case{'Clint Barton','Clint','clint','Hawkeye','hawkeye','clint barton'}
+        [top,subcount,L]= problem3('Clint_Barton.txt',N);
+        figure(1)
+        bar(subcount)
+        set(gca,'XtickLabel',top)
+        set(gca,'Fontsize',8)
+        title('Clint Barton aka Hawkeye')
+    case{'Bruce Banner','Bruce','bruce','Banner','banner','bruce banner','hulk','Hulk'}
+        [top,subcount,L]= problem3('Bruce_Banner.txt',N);
+        figure(1)
+        bar(subcount)
+        set(gca,'XtickLabel',top)
+        set(gca,'Fontsize',8)
+        title('Bruce Banner aka Hulk')
+
+    case {'Avegers Assemble','avengers assemble','avengers'}     % Calling all 6 heros at once
+        nexttile        % Holds bar graphs on one figue
+        [top,subcount,L]= problem3('Clint_Barton.txt',N);   % Runs final function for Clint
+        figure(1)
+        bar(subcount)   % Bar graph of Clint's most used words
+        title('Hawkeye')    % Title each graph for respected hero
+        set(gca,'XtickLabel',top)   % Bars will be labled with most used words
+        set(gca,'Fontsize',8)
+        
+        nexttile    % Holds each graph on Figure 1
+        [top,subcount,L]= problem3('Natasha_Romanoff.txt',N);
+        figure(1)
+        bar(subcount)
+        title('Black Widow')
+        set(gca,'XtickLabel',top)
+        set(gca,'Fontsize',8)
+        
+        nexttile
+        [top,subcount,L]= problem3('Bruce_Banner.txt',N);
+        figure(1)
+        bar(subcount)
+        title('Hulk')
+        set(gca,'XtickLabel',top)
+        set(gca,'Fontsize',8)
+        
+        nexttile
+        [top,subcount,L]= problem3('Steve_Rogers.txt',N);
+        figure(1)
+        bar(subcount)
+        title('Captain America')
+        set(gca,'XtickLabel',top)
+        set(gca,'Fontsize',8)
+       
+        nexttile
+        [top,subcount,L]= problem3('Tony_Stark.txt',N);
+        figure(1)
+        bar(subcount)
+        title('Ironman')
+        set(gca,'XtickLabel',top)
+        set(gca,'Fontsize',8)
+        
+        nexttile
+        [top,subcount,L]= problem3('Thor.txt',N);
+        figure(1)
+        bar(subcount)
+        set(gca,'XtickLabel',top)
+        set(gca,'Fontsize',8)
+        title('Thor')
+    otherwise
+        fprintf('HULK SMASH!') 
+        
+end
