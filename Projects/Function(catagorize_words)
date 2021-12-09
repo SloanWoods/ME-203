@@ -1,0 +1,5 @@
+function [barx,count]=categorizes_words_hero(clean)
+c = categorical(clean); % Gives a catagory to each word in the array
+barx = categories(c)';  % Names catagories for respected word
+count = countcats(c);   % Counts the number of times each word was used in each catagory 
+end
